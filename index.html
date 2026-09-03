@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asanka Goyammale Gedara — Data & BI Portfolio</title>
+  <title>Asanka Goyammale Gedara — Data &amp; BI Portfolio</title>
+  <meta name="description" content="Business Intelligence professional in Moncton, NB. Power BI, DAX, SQL, Python and machine learning. PL-300 certified, Lean Six Sigma Black Belt." />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -42,10 +43,10 @@
       font-size: 1.15rem; color: var(--white); letter-spacing: 0.02em;
     }
     .nav-logo span { color: var(--gold); }
-    nav ul { display: flex; gap: 32px; list-style: none; }
+    nav ul { display: flex; gap: 28px; list-style: none; }
     nav ul a {
       color: rgba(255,255,255,0.65); text-decoration: none;
-      font-size: 0.85rem; font-weight: 500; letter-spacing: 0.06em;
+      font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em;
       text-transform: uppercase; transition: color 0.2s;
     }
     nav ul a:hover { color: var(--gold); }
@@ -114,7 +115,7 @@
     .hero-subtitle {
       font-size: 1.05rem; line-height: 1.7;
       color: rgba(255,255,255,0.65);
-      max-width: 540px; margin-bottom: 36px; font-weight: 300;
+      max-width: 560px; margin-bottom: 36px; font-weight: 300;
     }
     .hero-tags {
       display: flex; flex-wrap: wrap; gap: 10px;
@@ -201,9 +202,8 @@
     }
 
     .hero-stats {
-      display: flex; gap: 40px; margin-top: 8px;
+      display: flex; flex-wrap: wrap; gap: 36px; margin-top: 8px;
     }
-    .stat { }
     .stat-number {
       font-family: 'DM Serif Display', serif;
       font-size: 2rem; color: var(--white); line-height: 1;
@@ -298,6 +298,8 @@
       width: 12px; height: 12px; border-radius: 50%;
       background: var(--accent); border: 2px solid var(--light);
     }
+    .timeline-item.current { border-left-color: var(--gold); }
+    .timeline-item.current::before { background: var(--gold); }
     .tl-top {
       display: flex; gap: 18px; align-items: flex-start;
       margin-bottom: 16px; padding-bottom: 16px;
@@ -308,18 +310,20 @@
       border-radius: 8px; background: var(--light);
       display: flex; align-items: center; justify-content: center;
       font-family: 'DM Serif Display', serif;
-      font-size: 1.3rem; font-weight: bold;
+      font-size: 1.15rem; font-weight: bold;
       color: var(--white);
       letter-spacing: -0.02em;
       border: 1px solid var(--border);
       overflow: hidden;
     }
+    .tl-logo.worksafe { background: linear-gradient(135deg, #0f766e, #0b4f4a); }
+    .tl-logo.qbitz    { background: linear-gradient(135deg, #2176ae, #0f2540); }
     .tl-logo.gapstars { background: linear-gradient(135deg, #0066cc, #004a99); }
-    .tl-logo.topra    { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .tl-logo.rec      { background: linear-gradient(135deg, #f59e0b, #d97706); }
     .tl-logo.wns      { background: linear-gradient(135deg, #7b2cbf, #5a189a); }
     .tl-logo.elearning{ background: linear-gradient(135deg, #18c964, #0f9d58); }
     .tl-logo.mas      { background: linear-gradient(135deg, #dc2626, #991b1b); }
-    .tl-logo.ruhunu   { background: linear-gradient(135deg, #0f766e, #134e4a); }
+    .tl-logo.maliban  { background: linear-gradient(135deg, #475569, #1e293b); }
     .tl-head {
       flex: 1; display: flex; justify-content: space-between;
       align-items: flex-start; flex-wrap: wrap; gap: 8px;
@@ -338,6 +342,7 @@
       border-radius: 2px; font-weight: 500; letter-spacing: 0.04em;
       white-space: nowrap;
     }
+    .tl-date.now { background: #fdf3e0; color: #96650c; }
     .tl-context {
       font-size: 0.85rem; color: var(--muted);
       margin-bottom: 12px; font-style: italic;
@@ -407,6 +412,52 @@
       width: 100%; height: 100%; display: block; border: none;
     }
 
+    /* ─── RECOMMENDATIONS ─── */
+    #recommendations { background: var(--light); border-top: 1px solid var(--border); }
+    .recs-intro {
+      font-size: 1rem; color: var(--muted); max-width: 620px;
+      line-height: 1.7; font-weight: 300; margin-top: 12px;
+    }
+    .recs-intro a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    .recs-intro a:hover { text-decoration: underline; }
+    .recs-columns { columns: 3; column-gap: 24px; }
+    .rec-card {
+      break-inside: avoid; page-break-inside: avoid;
+      display: inline-block; width: 100%;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 4px; padding: 26px 26px 22px;
+      margin-bottom: 24px; position: relative;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .rec-card:hover { box-shadow: 0 6px 30px rgba(15,37,64,0.08); border-color: #c4d4e8; }
+    .rec-card.highlight { border-top: 3px solid var(--gold); }
+    .rec-mark {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.4rem; line-height: 0.6; color: var(--border);
+      display: block; margin-bottom: 10px;
+    }
+    .rec-quote { font-size: 0.875rem; line-height: 1.7; color: var(--muted); font-weight: 300; }
+    .rec-quote p { margin-bottom: 10px; }
+    .rec-quote p:last-child { margin-bottom: 0; }
+    .rec-meta {
+      display: flex; gap: 12px; align-items: flex-start;
+      margin-top: 20px; padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .rec-avatar {
+      flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em;
+    }
+    .rec-card.highlight .rec-avatar { background: var(--accent); }
+    .rec-name { font-size: 0.9rem; color: var(--navy); font-weight: 600; line-height: 1.3; }
+    .rec-title { font-size: 0.75rem; color: var(--muted); margin-top: 2px; line-height: 1.4; font-weight: 300; }
+    .rec-rel {
+      font-size: 0.7rem; color: var(--accent); margin-top: 6px;
+      letter-spacing: 0.03em; text-transform: uppercase; font-weight: 500;
+    }
+
     /* ─── CERTIFICATIONS ─── */
     #certifications { background: var(--white); border-top: 1px solid var(--border); }
     .certs-grid {
@@ -472,7 +523,7 @@
     #contact .section-eyebrow { color: var(--gold); }
     .contact-sub {
       font-size: 1rem; color: rgba(255,255,255,0.5);
-      max-width: 480px; margin: 16px auto 48px; line-height: 1.7; font-weight: 300;
+      max-width: 520px; margin: 16px auto 48px; line-height: 1.7; font-weight: 300;
     }
     .contact-links {
       display: flex; justify-content: center; flex-wrap: wrap; gap: 16px;
@@ -513,6 +564,9 @@
     }
     .reveal.visible { opacity: 1; transform: none; }
 
+    @media (max-width: 1300px) {
+      .recs-columns { columns: 2; }
+    }
     @media (max-width: 1100px) {
       .hero { grid-template-columns: 1fr; gap: 48px; }
       .hero-photo-wrap { order: -1; max-width: 300px; margin: 0 auto; }
@@ -525,6 +579,7 @@
       .hero { padding: 120px 6vw 60px; }
       .dashboard-grid { grid-template-columns: 1fr; }
       .tl-top { flex-direction: column; }
+      .recs-columns { columns: 1; }
     }
     @media (max-width: 600px) {
       nav ul { display: none; }
@@ -541,6 +596,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#dashboards">Dashboards</a></li>
+      <li><a href="#recommendations">Recommendations</a></li>
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -551,25 +607,27 @@
     <div class="hero-grid-lines"></div>
 
     <div class="hero-content">
-      <div class="hero-eyebrow">Data &amp; Business Intelligence Professional</div>
+      <div class="hero-eyebrow">Power BI Developer &amp; BI Analyst · Moncton, NB</div>
       <h1>
         <span class="first-name">ASANKA</span>
         <span class="middle-name">Goyammale</span>
         <span class="last-name">GEDARA</span>
       </h1>
-      <div class="hero-tagline">Power BI · Machine Learning · Lean Six Sigma Black Belt</div>
+      <div class="hero-tagline">Power BI · DAX · SQL · Python · Lean Six Sigma Black Belt</div>
       <p class="hero-subtitle">
-        10+ years transforming complex datasets into executive-ready insights across
-        manufacturing, finance, and technology. Power BI specialist with deep expertise
-        in modern data platforms, ML, and automation.
+        Turning complex data into business decisions. 10+ years across manufacturing,
+        finance, insurance and technology, most recently as a Business Intelligence
+        Analyst at WorkSafeNB in New Brunswick. PL-300 certified, and trainer to
+        600+ students in Power BI.
       </p>
       <div class="hero-tags">
         <span class="hero-tag">Power BI · PL-300</span>
+        <span class="hero-tag">DAX · Power Query</span>
+        <span class="hero-tag">SQL</span>
+        <span class="hero-tag">Python</span>
         <span class="hero-tag">Machine Learning</span>
-        <span class="hero-tag">Snowflake</span>
-        <span class="hero-tag">Databricks</span>
-        <span class="hero-tag">SQL · DAX</span>
-        <span class="hero-tag">n8n Automation</span>
+        <span class="hero-tag">Microsoft Fabric</span>
+        <span class="hero-tag">Snowflake · Databricks</span>
         <span class="hero-tag">Lean Six Sigma Black Belt</span>
       </div>
       <div class="hero-cta">
@@ -588,6 +646,10 @@
         <div class="stat">
           <div class="stat-number">600<span>+</span></div>
           <div class="stat-label">Students Trained</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">15</div>
+          <div class="stat-label">LinkedIn Recommendations</div>
         </div>
       </div>
     </div>
@@ -610,9 +672,17 @@
         </div>
         <p>
           I'm <strong>Asanka Goyammale Gedara</strong>, a Business Intelligence specialist
-          currently pursuing a <strong>Master of Management at Crandall University, Moncton, NB</strong>.
-          My career spans industrial engineering, quality management, BI leadership, and
-          modern data platform engineering across Sri Lanka, Singapore, and now Canada.
+          based in Moncton, New Brunswick, currently completing a
+          <strong>Master of Management at Crandall University</strong>. My career spans
+          industrial engineering, quality management, BI leadership, and modern data
+          platform engineering across Sri Lanka, Singapore, and now Canada.
+        </p>
+        <p>
+          Most recently I worked as a <strong>Business Intelligence Analyst at
+          WorkSafeNB</strong>, building Power BI dashboards for the executive leadership
+          team, a Hoshin Kanri strategy deployment matrix with AHP weighting for the
+          Process Excellence team, and reporting that supported the organisation's data
+          governance, data quality and data literacy programs.
         </p>
         <p>
           I design and build <strong>Power BI dashboards</strong> that drive decisions, develop
@@ -622,10 +692,10 @@
           engagement, combining data storytelling with process improvement thinking.
         </p>
         <p>
-          I've trained <strong>600+ students</strong> in Power BI and Power Apps, led a
-          12-member BI team at Gapstars, and delivered BI and automation solutions for a
-          Singapore-based solar manufacturing client. Available for data analyst, BI
-          developer, and data engineering roles in the Moncton area and remote.
+          I've trained <strong>600+ students</strong> in Power BI and Power Apps through my own
+          training practice and eLearning.lk, and led a 12-member BI team at Gapstars.
+          Available for data analyst, BI developer, and data engineering roles in the
+          Moncton area and remote.
         </p>
         <div class="contact-bar">
           <div class="contact-item">
@@ -642,7 +712,11 @@
           </div>
           <div class="contact-item">
             <div class="ci-icon">🔗</div>
-            <a href="https://www.linkedin.com/in/asanka-senarath-314657108" target="_blank">linkedin.com/in/asanka-senarath-314657108</a>
+            <a href="https://www.linkedin.com/in/asanka-dilshan-senarath/" target="_blank" rel="noopener">linkedin.com/in/asanka-dilshan-senarath</a>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">💻</div>
+            <a href="https://github.com/asankadilshanmas-PBI" target="_blank" rel="noopener">github.com/asankadilshanmas-PBI</a>
           </div>
         </div>
       </div>
@@ -655,6 +729,7 @@
             <span class="pill featured">DAX</span>
             <span class="pill featured">Power Query (M)</span>
             <span class="pill">Star Schema Modeling</span>
+            <span class="pill">Row-Level Security</span>
             <span class="pill">KPI Dashboard Design</span>
             <span class="pill">Executive Reporting</span>
           </div>
@@ -666,6 +741,7 @@
             <span class="pill featured">Databricks</span>
             <span class="pill featured">Microsoft Fabric</span>
             <span class="pill">Azure Data Services</span>
+            <span class="pill">Azure DevOps Analytics</span>
             <span class="pill">Data Lakehouse</span>
           </div>
         </div>
@@ -682,13 +758,15 @@
           </div>
         </div>
         <div>
-          <div class="skill-group-label">Data Engineering</div>
+          <div class="skill-group-label">Data Engineering &amp; Governance</div>
           <div class="skill-pills">
             <span class="pill featured">SQL (T-SQL)</span>
             <span class="pill">SSIS</span>
             <span class="pill">SSAS</span>
             <span class="pill">ETL Pipelines</span>
             <span class="pill">Data Modelling</span>
+            <span class="pill">Data Governance</span>
+            <span class="pill">Data Quality</span>
           </div>
         </div>
         <div>
@@ -706,6 +784,8 @@
           <div class="skill-pills">
             <span class="pill featured">Lean Six Sigma Black Belt</span>
             <span class="pill">DMAIC</span>
+            <span class="pill">Hoshin Kanri</span>
+            <span class="pill">AHP</span>
             <span class="pill">Industrial Engineering</span>
             <span class="pill">SLA/KPI Management</span>
             <span class="pill">Continuous Improvement</span>
@@ -732,55 +812,127 @@
     </div>
     <div class="timeline">
 
+      <div class="timeline-item current reveal">
+        <div class="tl-top">
+          <div class="tl-logo worksafe">WSNB</div>
+          <div class="tl-head">
+            <div class="tl-role-block">
+              <div class="tl-role">Business Intelligence Analyst</div>
+              <div class="tl-company">WorkSafeNB / Travail sécuritaire NB</div>
+              <div class="tl-location">New Brunswick, Canada — Business Information Services, Planning team</div>
+            </div>
+            <div class="tl-date">Jun 2026 – Aug 2026</div>
+          </div>
+        </div>
+        <div class="tl-context">
+          Business intelligence role with New Brunswick's workplace health, safety and compensation authority, delivering Power BI reporting for executive leadership, Process Excellence and IT.
+        </div>
+        <ul class="tl-bullets">
+          <li>Built a <strong>KPI dashboard for the executive leadership team</strong>, consolidating corporate measures into a single view used for performance review.</li>
+          <li>Developed a <strong>Hoshin Kanri strategy deployment matrix (X-matrix)</strong> in Power BI with the Process Excellence team, mapping priority initiatives to nine corporate objectives, measures and named owners.</li>
+          <li>Implemented an <strong>AHP (Analytic Hierarchy Process) weighting model</strong> for the strategic scorecard, converting pairwise objective comparisons into defensible KPI weights.</li>
+          <li>Delivered operational dashboards for <strong>medical aid and recurrences</strong>, claim status transitions and initiative intake, working directly with business owners on requirements.</li>
+          <li>Built a <strong>bug and support dashboard on Azure DevOps Analytics (OData)</strong> giving the IT team visibility into backlog, ageing and throughput.</li>
+          <li>Contributed to organisation-wide <strong>data governance and data quality</strong> initiatives, and authored a <strong>data literacy program</strong> delivered as a branded presentation series.</li>
+          <li>Standardised report design through a shared <strong>Power BI theme and visual standards</strong>, improving consistency across the reporting estate.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item current reveal">
+        <div class="tl-top">
+          <div class="tl-logo qbitz">QB</div>
+          <div class="tl-head">
+            <div class="tl-role-block">
+              <div class="tl-role">Founder &amp; Trainer — Power BI, Power Apps, SQL</div>
+              <div class="tl-company">QBItz (Private) Limited</div>
+              <div class="tl-location">Colombo, Sri Lanka · Remote — part-time</div>
+            </div>
+            <div class="tl-date now">Mar 2024 – Present</div>
+          </div>
+        </div>
+        <div class="tl-context">
+          Founded and scaled a data analytics training practice from zero, now serving individual learners and corporate clients across Sri Lanka, the Gulf, Australia and Europe.
+        </div>
+        <ul class="tl-bullets">
+          <li>Designed and delivered <strong>9+ structured cohorts</strong> in Power BI, Power Apps and SQL, collectively training <strong>600+ students</strong> with consistent enrolment growth and strong learner satisfaction.</li>
+          <li>Developed a comprehensive curriculum covering <strong>DAX, Power Query, data modelling and dashboard design best practice</strong>, enabling working professionals and career changers to move into BI roles.</li>
+          <li>Ran <strong>corporate training programs</strong> including the Certified Power BI Mastery Advanced Course for finance and consulting teams.</li>
+          <li>Operate every side of the business independently — content development, student engagement, scheduling, and quality feedback loops — demonstrating end-to-end ownership and delivery.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item current reveal">
+        <div class="tl-top">
+          <div class="tl-logo elearning">eL</div>
+          <div class="tl-head">
+            <div class="tl-role-block">
+              <div class="tl-role">Visiting Lecturer — Business Intelligence</div>
+              <div class="tl-company">eLearning.lk (Pvt) Ltd</div>
+              <div class="tl-location">Sri Lanka · Remote — part-time</div>
+            </div>
+            <div class="tl-date now">Jul 2023 – Present</div>
+          </div>
+        </div>
+        <div class="tl-context">
+          Lead instructor for Business Analytics and Power Platform curriculum on Sri Lanka's largest online education platform.
+        </div>
+        <ul class="tl-bullets">
+          <li>Designed and delivered the 2-month <strong>Business Analytics with Microsoft Power BI</strong> masterclass across multiple batches.</li>
+          <li>Developed and taught a 2-month <strong>Microsoft Power Apps Masterclass</strong>, covering app development fundamentals and practical business use cases.</li>
+          <li>Broke down complex BI and low-code concepts into <strong>clear, practical lessons</strong> for learners from non-technical backgrounds.</li>
+          <li>Consistently received high student ratings and was <strong>recognised as one of eLearning.lk's most sought-after instructors</strong>.</li>
+          <li>Produced Sinhala-language content on data careers and data analysis, widening access to BI skills.</li>
+        </ul>
+      </div>
+
       <div class="timeline-item reveal">
         <div class="tl-top">
           <div class="tl-logo gapstars">GS</div>
           <div class="tl-head">
             <div class="tl-role-block">
               <div class="tl-role">Business Intelligence Team Lead</div>
-              <div class="tl-company">Gapstars Pvt Ltd</div>
-              <div class="tl-location">Colombo, Sri Lanka</div>
+              <div class="tl-company">Gapstars</div>
+              <div class="tl-location">Colombo, Sri Lanka · Hybrid</div>
             </div>
             <div class="tl-date">Feb 2025 – Oct 2025</div>
           </div>
         </div>
         <div class="tl-context">
-          Led the central BI function serving European tech clients, responsible for team performance, dashboard quality, and reporting standards across the organization.
+          Led the central BI function serving European tech clients, responsible for team performance, dashboard quality, and reporting standards across the organisation.
         </div>
         <ul class="tl-bullets">
           <li>Directed a <strong>12-member business intelligence team</strong> through daily stand-ups and task allocation, driving a <strong>40% increase in on-time project delivery</strong> and improved data accuracy.</li>
           <li>Designed, developed, and maintained <strong>100+ Power BI dashboards</strong> aligned with business requirements, supporting both operational and executive decision-making.</li>
-          <li>Built rigorous quality control templates and validation checks, <strong>reducing data errors by 95%</strong> across all reporting functions and strengthening process standards organization-wide.</li>
+          <li>Built rigorous quality control templates and validation checks, <strong>reducing data errors by 95%</strong> across all reporting functions and strengthening process standards organisation-wide.</li>
           <li>Delivered <strong>200+ hours of structured training</strong> on Power BI and SQL dashboarding, raising overall team tool proficiency and reducing dependency on senior reviewers.</li>
           <li>Partnered with stakeholders to develop <strong>predictive analytics prototypes</strong> for operational forecasting, laying the groundwork for ML-enabled reporting.</li>
-          <li>Served as the escalation point for complex DAX, data modeling, and performance optimization challenges across the BI portfolio.</li>
+          <li>Served as the escalation point for complex DAX, data modelling, and performance optimisation challenges across the BI portfolio.</li>
         </ul>
       </div>
 
       <div class="timeline-item reveal">
         <div class="tl-top">
-          <div class="tl-logo topra">TW</div>
+          <div class="tl-logo rec">REC</div>
           <div class="tl-head">
             <div class="tl-role-block">
               <div class="tl-role">Senior Data Engineer</div>
-              <div class="tl-company">Topra World Pvt Ltd</div>
-              <div class="tl-location">Singapore — assigned to a Singapore-based solar manufacturing client</div>
+              <div class="tl-company">REC</div>
+              <div class="tl-location">Singapore · Remote — freelance, solar manufacturing</div>
             </div>
-            <div class="tl-date">Dec 2022 – Jun 2025</div>
+            <div class="tl-date">Jan 2023 – Jun 2025</div>
           </div>
         </div>
         <div class="tl-context">
-          Delivered end-to-end data engineering and BI solutions for a Singapore-based solar manufacturing client, working across the full Microsoft data stack and modern cloud platforms.
+          Delivered end-to-end data engineering and BI solutions for a Singapore-based solar manufacturer, working across the full Microsoft data stack and modern cloud platforms.
         </div>
         <ul class="tl-bullets">
-          <li>Designed and developed <strong>Power BI dashboards</strong> for advanced analytics, operational performance tracking, and executive-level visualization across multiple business units.</li>
+          <li>Designed and developed <strong>Power BI dashboards</strong> for advanced analytics, operational performance tracking, and executive-level visualisation across multiple business units.</li>
           <li>Built and maintained <strong>SQL pipelines</strong> ensuring reliable data integration and end-to-end processing across business systems, source applications, and reporting layers.</li>
           <li>Worked extensively with <strong>SSIS and SSAS</strong> to deliver ETL solutions and analytical data models supporting business intelligence needs.</li>
-          <li>Delivered financial reporting solutions using Power BI, providing leadership with <strong>real-time visibility</strong> into revenue, cost, margin, and operational KPIs.</li>
-          <li>Developed business applications using <strong>Power Apps</strong> and built process automation solutions with <strong>Power Automate</strong> to streamline operational workflows and reduce manual effort.</li>
-          <li>Managed stakeholder relationships directly with the client, ensuring timely communication of project progress, risk surfacing, and alignment with business expectations.</li>
+          <li>Delivered financial reporting solutions in Power BI, giving leadership <strong>real-time visibility</strong> into revenue, cost, margin, and operational KPIs.</li>
+          <li>Developed business applications with <strong>Power Apps</strong> and process automation with <strong>Power Automate</strong> to streamline operational workflows and reduce manual effort.</li>
+          <li>Managed the client relationship directly, ensuring timely communication of progress, early risk surfacing, and alignment with business expectations.</li>
           <li>Prepared comprehensive <strong>technical documentation</strong> for all developments, configurations, and deployments, supporting long-term maintainability.</li>
-          <li>Successfully delivered complex, multi-stream projects under <strong>tight deadlines</strong> with high accuracy and quality standards.</li>
         </ul>
       </div>
 
@@ -789,48 +941,25 @@
           <div class="tl-logo wns">WNS</div>
           <div class="tl-head">
             <div class="tl-role-block">
-              <div class="tl-role">Deputy Manager — Quality</div>
-              <div class="tl-company">WNS Global Services (Pvt.) Ltd.</div>
-              <div class="tl-location">Colombo, Sri Lanka — Finance &amp; Accounting, UK Insurance client</div>
+              <div class="tl-role">Deputy Manager — Quality &amp; Business Excellence</div>
+              <div class="tl-company">WNS Global Services (Pvt) Ltd</div>
+              <div class="tl-location">Colombo, Sri Lanka — Finance &amp; Accounting, UK insurance client</div>
             </div>
-            <div class="tl-date">Oct 2019 – Mar 2025</div>
+            <div class="tl-date">Oct 2019 – Feb 2025</div>
           </div>
         </div>
         <div class="tl-context">
           Owned quality assurance and performance reporting for a Finance &amp; Accounting BPO engagement serving a major UK-based insurance client, operating at both C-suite and process-floor levels.
         </div>
         <ul class="tl-bullets">
-          <li>Ensured <strong>SLAs and KPIs</strong> were consistently met within agreed Turnaround Time (TAT) and accuracy standards through meticulous monitoring, analysis, and reporting.</li>
-          <li>Played a <strong>pivotal role in setting up a new client account</strong> from a quality standpoint: finalizing KPIs and SLAs, developing and delivering training programs, and monitoring the QA team against client expectations.</li>
-          <li>Successfully completed numerous projects at both <strong>C-level and operational levels</strong> involving data analysis, dashboard creation, and executive reporting to provide actionable insights.</li>
-          <li>Conducted multiple <strong>Power BI training sessions</strong> to enhance team proficiency, embedding self-service BI culture across the engagement.</li>
-          <li>As a <strong>Certified Lean Six Sigma Black Belt</strong>, mentored multiple Yellow Belt, Green Belt, Kaizen, and Brain Wave projects, guiding teams through the DMAIC process and facilitating structured problem-solving sessions.</li>
-          <li>Led the <strong>ideation drive for the Key Account team in 2019 and 2020</strong>, fostering a culture of continuous improvement and generating measurable efficiency gains.</li>
-        </ul>
-      </div>
-
-      <div class="timeline-item reveal">
-        <div class="tl-top">
-          <div class="tl-logo elearning">eL</div>
-          <div class="tl-head">
-            <div class="tl-role-block">
-              <div class="tl-role">Part-Time Instructor — Power BI &amp; Power Apps</div>
-              <div class="tl-company">eLearning.lk</div>
-              <div class="tl-location">Sri Lanka's largest online education platform</div>
-            </div>
-            <div class="tl-date">Aug 2023 – Present</div>
-          </div>
-        </div>
-        <div class="tl-context">
-          Lead instructor for Business Analytics and Power Platform curriculum, designing and delivering flagship courses that have become the platform's most sought-after BI programs.
-        </div>
-        <ul class="tl-bullets">
-          <li>Designed and delivered a 2-month <strong>Business Analytics with Microsoft Power BI</strong> crash course across <strong>9+ batches</strong>, training <strong>600+ students</strong> across all courses.</li>
-          <li>Developed and taught a 2-month <strong>Microsoft Power Apps Masterclass</strong>, covering app development fundamentals and practical business use cases.</li>
-          <li>Broke down complex BI and low-code development concepts into <strong>clear, practical lessons</strong> accessible to learners from diverse professional backgrounds.</li>
-          <li>Consistently received high student ratings and was <strong>recognized as one of eLearning.lk's most sought-after instructors</strong>.</li>
-          <li>Mentored learners individually and fostered engagement through interactive teaching methods and real-world application exercises.</li>
-          <li>Recommended by the eLearning.lk COO for exceptional contribution to learner outcomes and platform reputation.</li>
+          <li>Ensured <strong>SLAs and KPIs</strong> were consistently met within agreed turnaround time and accuracy standards through meticulous monitoring, analysis, and reporting.</li>
+          <li>Played a <strong>pivotal role in setting up a new client account</strong> from a quality standpoint: finalising KPIs and SLAs, developing and delivering training, and monitoring the QA team against client expectations.</li>
+          <li>Acted as a <strong>data evangelist</strong> for WNS, using data science and analytics insight to improve service SLAs, KPIs and organisational development.</li>
+          <li>Worked with <strong>senior leadership</strong> to shape organisation-level strategy enhanced by data insight and forecasting.</li>
+          <li>Identified and implemented improvement initiatives using the <strong>Business Excellence framework, Six Sigma and Lean Six Sigma</strong>, delivering measurable value to the business proposition.</li>
+          <li>As a <strong>Certified Lean Six Sigma Black Belt</strong>, mentored Yellow Belt, Green Belt, Kaizen and Brain Wave projects, guiding teams through DMAIC and facilitating structured problem-solving.</li>
+          <li>Coached process owners in <strong>statistical tools and process measurement systems</strong>, building a business excellence mindset at every level.</li>
+          <li>Led the <strong>ideation drive for the Key Account team in 2019 and 2020</strong>, fostering continuous improvement and generating measurable efficiency gains.</li>
         </ul>
       </div>
 
@@ -839,11 +968,11 @@
           <div class="tl-logo mas">MAS</div>
           <div class="tl-head">
             <div class="tl-role-block">
-              <div class="tl-role">Industrial Engineer / Lean Six Sigma Practitioner</div>
-              <div class="tl-company">MAS Holdings Pvt Ltd</div>
+              <div class="tl-role">Executive Industrial Engineer</div>
+              <div class="tl-company">MAS Holdings (Pvt) Ltd</div>
               <div class="tl-location">Sri Lanka — South Asia's largest apparel manufacturer</div>
             </div>
-            <div class="tl-date">Mar 2013 – Sep 2019</div>
+            <div class="tl-date">May 2014 – Oct 2019</div>
           </div>
         </div>
         <div class="tl-context">
@@ -851,35 +980,38 @@
         </div>
         <ul class="tl-bullets">
           <li>Delivered <strong>end-to-end process re-engineering and Lean Six Sigma transformation projects</strong> to increase operational value and profitability across production lines.</li>
+          <li>Led the <strong>automation department with a USD 1 million annual turnover</strong>.</li>
           <li>Calculated <strong>Standard Minute Values (SMV)</strong> for all product types for marketing and planning purposes using manual methods and <strong>GSD software</strong>, with full operation breakdowns.</li>
-          <li>Prepared <strong>module layouts</strong> to optimize machinery and human resource utilization across production floors, improving throughput.</li>
+          <li>Prepared <strong>module layouts</strong> to optimise machinery and human resource utilisation across production floors, improving throughput.</li>
           <li>Calculated raw material consumption for all garment categories to support <strong>procurement and planning accuracy</strong>.</li>
-          <li>Conducted <strong>Industrial Engineering and Lean Six Sigma workshops</strong> to drive cultural change and embed continuous improvement practices plant-wide.</li>
-          <li>Provided actionable, <strong>data-driven recommendations</strong> to address business performance issues and operational bottlenecks.</li>
-          <li>Identified employee training needs and skill gaps; arranged internal and external training programs and introduced motivation systems to <strong>reduce absenteeism and sustain high efficiency</strong>.</li>
-          <li>Maintained high value-add time on sewing floors through <strong>work sampling</strong> and introduced new methods to maximize productivity across all departments.</li>
+          <li>Conducted <strong>Industrial Engineering and Lean Six Sigma workshops</strong> to drive cultural change and embed continuous improvement plant-wide.</li>
+          <li>Prepared <strong>daily, weekly and monthly efficiency and process analysis reports</strong>, updating management on target versus achievement and driving preventive action.</li>
+          <li>Identified employee training needs and skill gaps; arranged internal and external training and introduced motivation systems to <strong>reduce absenteeism and sustain high efficiency</strong>.</li>
+          <li>Maintained high value-add time on sewing floors through <strong>work sampling</strong> and introduced new methods to maximise productivity across all departments.</li>
         </ul>
       </div>
 
       <div class="timeline-item reveal">
         <div class="tl-top">
-          <div class="tl-logo ruhunu">RDB</div>
+          <div class="tl-logo maliban">EAM</div>
           <div class="tl-head">
             <div class="tl-role-block">
-              <div class="tl-role">Bank Teller</div>
-              <div class="tl-company">Ruhunu Development Bank</div>
+              <div class="tl-role">Production Supervisor</div>
+              <div class="tl-company">EAM Maliban Textiles (Pvt) Ltd</div>
               <div class="tl-location">Sri Lanka</div>
             </div>
-            <div class="tl-date">Mar 2013 – Feb 2014</div>
+            <div class="tl-date">Mar 2013 – May 2014</div>
           </div>
         </div>
         <div class="tl-context">
-          Frontline banking role providing direct customer service, cash handling, and transaction processing in a regional development bank.
+          First manufacturing leadership role, running the end-to-end production process from raw material warehouse through to finished goods delivery.
         </div>
         <ul class="tl-bullets">
-          <li>Processed daily customer transactions including deposits, withdrawals, and account services with high accuracy and adherence to banking compliance standards.</li>
-          <li>Delivered strong <strong>face-to-face customer service</strong> in a high-volume branch environment, building early foundations in stakeholder communication.</li>
-          <li>Balanced cash drawers daily and supported reconciliation workflows, developing the attention-to-detail and data accuracy discipline that now underpins all BI work.</li>
+          <li>Accountable for <strong>production line efficiency</strong> and for delivering 100% of order quantity on schedule.</li>
+          <li>Ran <strong>continuous improvement projects</strong> and maintained lean systems on the production floor.</li>
+          <li>Drove <strong>productivity improvement through method changes at the sample stage</strong>, minimising overtime, manpower and waste.</li>
+          <li>Planned production resources for future styles with the planning and sample room teams, and pre-planned to minimise downtime.</li>
+          <li>Handled technical and quality issues on the line, and led, guided and motivated the production team.</li>
         </ul>
       </div>
 
@@ -953,6 +1085,270 @@
     </div>
   </section>
 
+  <!-- RECOMMENDATIONS -->
+  <section id="recommendations">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">What People Say</div>
+      <h2 class="section-title">15 recommendations<br/><em>from managers, peers and learners</em></h2>
+      <p class="recs-intro">
+        Every recommendation below is published on my
+        <a href="https://www.linkedin.com/in/asanka-dilshan-senarath/details/recommendations/" target="_blank" rel="noopener">LinkedIn profile</a>
+        and reproduced here in full.
+      </p>
+    </div>
+
+    <div class="recs-columns">
+
+      <div class="rec-card highlight reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>Asanka did a summer student position for us at WorkSafeNB. He was a phenomenal asset from day one. He contributed immediately to the team with his proactive approach and professionalism.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">AC</div>
+          <div>
+            <div class="rec-name">Andrew Chatterton</div>
+            <div class="rec-title">IT &amp; Project Management Leader — WorkSafeNB</div>
+            <div class="rec-rel">Managed Asanka directly · Aug 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card highlight reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I had the opportunity to get to know Asanka during our time at Brompton Bicycle, particularly while traveling together on business trips. Although we worked in different teams, those interactions gave me a clear view of the kind of professional he is.</p>
+          <p>Asanka stands out for his ability to connect data with real-world outcomes. He brings a strong blend of technical expertise in business intelligence and analytics, along with a practical, process-driven mindset shaped by his background in industrial engineering and Lean Six Sigma. It's clear that he focuses not just on analysis, but on driving meaningful improvements.</p>
+          <p>What I appreciated most was how approachable and thoughtful he is in conversations. Whether discussing work or broader ideas, he communicates clearly and brings a structured way of thinking that reflects his experience and discipline.</p>
+          <p>From what I've seen, Asanka is someone who is committed to continuous improvement, both in systems and in people. I'm confident he would be a valuable addition to any team looking for someone who can translate data into actionable insight.</p>
+          <p>I'd be happy to recommend him.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">JT</div>
+          <div>
+            <div class="rec-name">Jerome Thayananthajothy</div>
+            <div class="rec-title">Technical Lead · AI-Driven Systems Architect · AWS &amp; Full-Stack</div>
+            <div class="rec-rel">Worked on the same team · May 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I'm pleased to share my experience completing the Power BI course conducted by Asanka through e-Learning.lk.</p>
+          <p>Asanka explained technical concepts, new Power BI features, and the latest trends in a very clear and practical manner. Before joining this course, I had little to no understanding of how Power BI works, but through his well-structured sessions and hands-on approach, I gained a strong overall understanding and confidence in using Power BI effectively.</p>
+          <p>The course was well managed, beginner-friendly, and highly informative, making complex topics easy to grasp.</p>
+          <p>Thank you, Asanka, for your excellent guidance and support. I truly appreciate the effort and highly recommend this course to anyone looking to build or strengthen their Power BI skills.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">HB</div>
+          <div>
+            <div class="rec-name">Harsha Eranga Bandaranayake</div>
+            <div class="rec-title">Assistant Finance Manager — ITC Ratnadipa Colombo</div>
+            <div class="rec-rel">Course participant · Dec 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card highlight reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I had the pleasure of working with Asanka on the same team, and I was consistently impressed by his expertise, professionalism, and problem-solving abilities. As a Lean Six Sigma Black Belt and Business Intelligence specialist, he brings a unique blend of analytical skills, technical knowledge, and process improvement mindset to every project. Asanka approaches challenges with creativity, precision, and a results-driven attitude, making him a highly reliable and valuable team member.</p>
+          <p>He is a talented, dedicated, and trustworthy professional, and I wholeheartedly recommend him.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">CL</div>
+          <div>
+            <div class="rec-name">Chathura Liyanage</div>
+            <div class="rec-title">Tech Lead, Software Engineering — MAS Holdings</div>
+            <div class="rec-rel">Worked on the same team · Nov 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I had the pleasure of learning under Mr. Asanka Senarath during the Microsoft Power BI Mastery – Advanced Course. Mr. Asanka's depth of knowledge, structured approach, and hands-on teaching style made this intensive program incredibly valuable and engaging.</p>
+          <p>As someone who is not from an IT or data background, I was initially unsure about grasping high-level technical content, especially in areas like advanced DAX functions and data modeling. However, Mr. Asanka's exceptional teaching style made these complex topics simple and relatable, allowing me to absorb and apply them with confidence. From dynamic dashboards to real-world use cases, every session was thoughtfully designed and delivered with clarity. What truly stood out was his ability to bridge the gap between technical depth and practical understanding.</p>
+          <p>Thank you, Sir, for your mentorship, patience, and unwavering dedication to empowering professionals like me with future-ready analytics skills. I would highly recommend his training sessions to anyone looking to master Power BI, regardless of your technical background.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">IR</div>
+          <div>
+            <div class="rec-name">Inoka Ranathunga</div>
+            <div class="rec-title">Finance &amp; Strategy Professional · EMBA (PIM SJP) · CA Sri Lanka</div>
+            <div class="rec-rel">Course participant · Jul 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I had the pleasure of learning Power BI under the guidance of Asanka during the BI course conducted by QBItz. His teaching style was clear, practical, and engaging, making complex topics easy to understand.</p>
+          <p>I highly recommend him to anyone looking to build their skills in business intelligence and data visualization.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">SL</div>
+          <div>
+            <div class="rec-name">Sarath Liyanage</div>
+            <div class="rec-title">Senior Finance / Accounting Management Professional</div>
+            <div class="rec-rel">Course participant · Jul 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I had the privilege of attending the Certified: Power BI Mastery – Advanced Course conducted as a corporate training program for EXCOM Consultants, delivered by none other than MCT Asanka Senarath. The course was expertly designed and delivered, going deep into advanced DAX, data modeling, and dynamic, real-world report development.</p>
+          <p>Asanka's ability to explain complex concepts in an accessible way and align the training with actual business use cases made the learning experience truly transformational. His deep knowledge, patience, and practical approach helped us elevate our data analytics skills to a new level.</p>
+          <p>A big thank you to Asanka and QBItz (Private) Limited for such high-impact training. I highly recommend Asanka to any organization or individual looking to strengthen their BI capabilities and drive data-driven decision-making.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">NL</div>
+          <div>
+            <div class="rec-name">Niyomal Liyanage</div>
+            <div class="rec-title">Accountant — EXCOM Consultants</div>
+            <div class="rec-rel">Corporate training client · Jul 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I had the pleasure of learning Power BI under the guidance of Asanka, and I couldn't have asked for a better mentor. His deep knowledge of data visualisation, combined with a clear and structured teaching style, made complex concepts easy to grasp. Beyond his technical expertise, he was always approachable, patient, and willing to go the extra mile to ensure students truly understood the content. His mentorship has been instrumental in building my confidence and skills in Power BI. I highly recommend him to anyone looking to learn from one of the best in the field.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">SR</div>
+          <div>
+            <div class="rec-name">Shehan Rulach</div>
+            <div class="rec-title">Corporate Systems Officer — SA Health</div>
+            <div class="rec-rel">Course participant · Jun 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I'm pleased to share that I've completed the Advanced Power BI course conducted by Asanka. His in-depth knowledge, structured approach, and practical demonstrations made complex concepts easy to grasp.</p>
+          <p>Thank you, Asanka, for delivering a well-rounded and insightful learning experience. Highly recommended for anyone looking to enhance their Power BI skills.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">UA</div>
+          <div>
+            <div class="rec-name">Usman Anfas</div>
+            <div class="rec-title">Business Control Manager (Norway, UK, Latvia, USA)</div>
+            <div class="rec-rel">Course participant · Jun 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I highly recommend Mr. Asanka as a Power BI lecturer. He possesses an impressive depth of knowledge in Power BI and has a remarkable ability to simplify complex concepts. His teaching style is both engaging and highly effective, making it easy for students to grasp and apply Power BI skills with confidence.</p>
+          <p>I had the privilege of learning from Mr. Asanka, and his guidance significantly enhanced my understanding of Power BI. If you're looking to master Power BI, Mr. Asanka is the ideal person to help you achieve your goals.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">EP</div>
+          <div>
+            <div class="rec-name">Elancgoan Perumal</div>
+            <div class="rec-title">Regional Manager, Retail Operations — Dialog Axiata PLC</div>
+            <div class="rec-rel">Course participant · May 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I had the privilege of attending the Power BI Mastery Advanced Course by Mr. Asanka Senarath at QBItz (Pvt) Ltd. His deep expertise in Power BI, combined with a clear and hands-on teaching style, made complex DAX code easy to understand and apply. He connected theory to real-world examples and encouraged interactive learning. I'm truly grateful for the valuable knowledge gained and highly recommend him for anyone seeking expert training in data analytics.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">PS</div>
+          <div>
+            <div class="rec-name">Prashan de Silva</div>
+            <div class="rec-title">Logistics &amp; Operations Professional — Port &amp; Terminal Operations, Norway</div>
+            <div class="rec-rel">Course participant · May 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card highlight reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I had the privilege of learning from Mr. Asanka Senarath, an exceptional instructor and mentor with deep expertise in Data Science, Data Analytics, Power BI, SQL, Python, Machine Learning, and more.</p>
+          <p>When I enrolled in the eLearning.lk Power BI Masterclass, my knowledge of the subject was almost nonexistent. Coming from a completely different field without a formal IT background, I initially felt overwhelmed. However, Mr. Asanka's structured approach, engaging teaching style, and ability to break down complex concepts into digestible insights transformed my learning experience.</p>
+          <p>Before this course, working with datasets felt like chaos to me. But under his guidance, I learned how to clean, analyze, and visualize data, turning raw numbers into meaningful insights. His passion for teaching not only helped me grasp the fundamentals but also inspired me to consider a career in data analytics.</p>
+          <p>I highly recommend Mr. Asanka Senarath to anyone looking for an expert coach in Power BI and Data Analytics. His dedication, knowledge, and mentorship make him a standout professional in the field.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">TP</div>
+          <div>
+            <div class="rec-name">Thilina Perera</div>
+            <div class="rec-title">Microsoft Certified Power BI Analyst · End-to-End BI Developer</div>
+            <div class="rec-rel">Course participant · Mar 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I am excited to recommend Asanka, who was my trainer during my Advanced Power BI training. With a sound knowledge in Data Science, Asanka possesses a comprehensive understanding of the subject, making complex concepts easy to grasp for his students.</p>
+          <p>As a trainer, Asanka goes above and beyond to assist his students, ensuring that we not only understand the material but also feel confident in applying it. His teaching style is engaging and supportive, creating an environment where questions are encouraged and learning is prioritized.</p>
+          <p>I can confidently say that Asanka is one of the best teachers I have encountered in this field. His passion for data visualization and commitment to his students' success truly set him apart. I am grateful for the knowledge and skills I gained under his guidance and highly recommend him to anyone seeking to learn Power BI or enhance their data skills.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">MP</div>
+          <div>
+            <div class="rec-name">Menaka Perera</div>
+            <div class="rec-title">Business Analytics Ops Management — Dialog Axiata PLC</div>
+            <div class="rec-rel">Course participant · Feb 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I express my gratitude for Asanka Sir's exceptional teaching and extensive knowledge of Power BI. When I first enrolled in his course, I had little understanding of the subject. However, his patient and clear explanations made everything so much easier to grasp. By the end of the course, I was confidently creating Power BI dashboards on my own, something I never imagined I'd be able to do so quickly. The skills I gained have had a direct and positive impact on my career development. I'm truly thankful for his guidance and would highly recommend him to anyone looking to develop practical Power BI skills and advance in their career.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">LD</div>
+          <div>
+            <div class="rec-name">Lochana Dilshani</div>
+            <div class="rec-title">Graduate — University of Colombo, Faculty of Science</div>
+            <div class="rec-rel">Course participant · Jan 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card reveal">
+        <span class="rec-mark">&ldquo;</span>
+        <div class="rec-quote">
+          <p>I had the pleasure of learning from Asanka Dilshan Senarath during the Microsoft Power BI Mastery - Advanced Course at QBItz (Private) Limited. Asanka is an exceptional instructor who combines deep technical expertise with an engaging teaching style.</p>
+          <p>His ability to break down complex Power BI concepts into digestible, practical lessons was truly remarkable. He not only shared invaluable insights into advanced Power BI features but also encouraged innovative thinking and problem-solving, making the course highly impactful.</p>
+          <p>I highly recommend Asanka to anyone looking to gain a thorough understanding of Power BI or advance their skills in data analytics. Thank you, Asanka, for your dedication and for inspiring learners to excel in data visualization and analytics.</p>
+        </div>
+        <div class="rec-meta">
+          <div class="rec-avatar">LH</div>
+          <div>
+            <div class="rec-name">Lasni Ranura Hewathanthri</div>
+            <div class="rec-title">Senior Software Developer · Oracle PL/SQL · SQL &amp; Power BI</div>
+            <div class="rec-rel">Course participant · Jan 2025</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- CERTIFICATIONS -->
   <section id="certifications">
     <div class="section-header reveal">
@@ -966,9 +1362,9 @@
         <div class="cert-badge">✓ Certified</div>
       </div>
       <div class="cert-card reveal">
-        <div class="cert-issuer">SSMI / Six Sigma Management Institute</div>
+        <div class="cert-issuer">SSMI Asia</div>
         <div class="cert-name">Certified Lean Six Sigma Black Belt (CLSSBB)</div>
-        <div class="cert-badge">✓ Certified</div>
+        <div class="cert-badge">✓ Certified · 2018</div>
       </div>
       <div class="cert-card reveal">
         <div class="cert-issuer">Microsoft</div>
@@ -993,19 +1389,19 @@
       <div class="edu-card reveal">
         <div class="edu-degree">Master of Management (In Progress)</div>
         <div class="edu-school">Crandall University, Moncton, NB, Canada</div>
-        <div class="edu-year">2025 – Present</div>
-        <div class="edu-note">Coursework: Leading Change Management, Organizational Behaviour, Strategic Management</div>
+        <div class="edu-year">Aug 2025 – Apr 2027 · Graduating May 2027</div>
+        <div class="edu-note">Coursework: Leading Change Management, Organizational Behaviour, Strategic Management. Includes a required co-op work term.</div>
       </div>
       <div class="edu-card reveal">
-        <div class="edu-degree">Master of Science — Data Analytics</div>
+        <div class="edu-degree">MSc — Data Analytics</div>
         <div class="edu-school">Robert Gordon University, Aberdeen, UK</div>
         <div class="edu-year">Completed</div>
-        <div class="edu-note">Specialization in applied data analytics, statistical modelling, and business intelligence</div>
+        <div class="edu-note">Specialisation in applied data analytics, statistical modelling, and business intelligence</div>
       </div>
       <div class="edu-card reveal">
-        <div class="edu-degree">BSc (Hons) Business and Management Studies — Second Class Division One</div>
+        <div class="edu-degree">BSc (Hons) Business and Management Studies — Second Class, Division One</div>
         <div class="edu-school">Cardiff Metropolitan University, UK</div>
-        <div class="edu-year">Completed</div>
+        <div class="edu-year">Awarded January 2021</div>
         <div class="edu-note">Honours degree in Business and Management with strong academic achievement</div>
       </div>
     </div>
@@ -1021,13 +1417,14 @@
     </p>
     <div class="contact-links reveal">
       <a href="mailto:asankadilshanmas@gmail.com" class="contact-link primary">✉ Email Me</a>
-      <a href="https://www.linkedin.com/in/asanka-senarath-314657108" target="_blank" class="contact-link">🔗 LinkedIn</a>
+      <a href="https://www.linkedin.com/in/asanka-dilshan-senarath/" target="_blank" rel="noopener" class="contact-link">🔗 LinkedIn</a>
+      <a href="https://github.com/asankadilshanmas-PBI" target="_blank" rel="noopener" class="contact-link">💻 GitHub</a>
       <a href="tel:+15062956251" class="contact-link">📞 (506) 295-6251</a>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Asanka Goyammale Gedara · Moncton, NB, Canada</p>
+    <p>© 2026 Asanka Goyammale Gedara · Moncton, NB, Canada</p>
     <p>Built with Power BI + HTML · Open to work</p>
   </footer>
 
@@ -1040,9 +1437,9 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
 
-    document.querySelectorAll('.dashboard-grid, .certs-grid, .edu-grid, .timeline').forEach(grid => {
+    document.querySelectorAll('.dashboard-grid, .certs-grid, .edu-grid, .timeline, .recs-columns').forEach(grid => {
       grid.querySelectorAll('.reveal').forEach((el, i) => {
-        el.style.transitionDelay = (i * 0.08) + 's';
+        el.style.transitionDelay = Math.min(i * 0.06, 0.4) + 's';
       });
     });
   </script>
